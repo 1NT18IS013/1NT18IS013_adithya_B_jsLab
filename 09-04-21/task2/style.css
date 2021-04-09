@@ -11,6 +11,11 @@ body{
     text-align: center;
     font-family: 'Montserrat', 
     sans-serif;
+    color: grey;
+}
+
+.focus{
+    color: var(--color3);
 }
 
 .outermost__box{
