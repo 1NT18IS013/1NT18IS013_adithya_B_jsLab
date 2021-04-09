@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --primary : #BE185D;
+    --grey : #6B7280;
+    --offwhite : #F3F4F6;
+}
+
+body{
+    font-family: 'Montserrat', 
+    sans-serif;
+}
+
+hr{
+    margin: 1.5rem 0rem;
+}
+
+/* containers */
+.container{
+    padding: 0 1rem o 1rem;
+}
+
+.centered-container{
+    max-width: 600px;
+    margin: auto;
+}
+
+/* links */
+.link{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.link-primary{
+    background: var(--primary);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.link-secondary{
+    color: var(--primary);
+    border-radius: 0.5rem;
+    border: 1px solid 
+            var(--primary);
+}
+
+/* lists */
+
+.list-nonBullet{
+    list-style: none;
+}
+
+.list-item-inline{
+    display: inline;
+    padding: 0 0.5rem;
+}
+
+/* navigation */
+
+.navbar{
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.navBrand{
+    font-weight: bold;
+}
+
+.navbar .link{
+    color: white;
+}
+
+.navbar .nav-items{
+    text-align: right;
+}
+
+.link-active{
+    font-weight: bold;
+}
+
+/* sections */
+section{
+    padding: 1rem;
+}
+
+section h3{
+    color : var(--grey);
+}
+
+.section-ow{
+    background: var(--offwhite);
+}
+
+/* footer */
+footer{
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top-right-radius : 1.5rem;
+}
+
+.footer ul{
+    padding-inline-start: 0;
+}
+
+footer .link{
+    color: white;
+}
+
+/* form */
+form{
+    border: 1px solid var(--grey);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 250px;
+    margin: auto;
+}
+
+fieldset{
+    margin: 0;
+    border: 0;
+}
+
+input{
+    margin: 0;
+    border-radius: 0.4rem;
+}
+
+.account-creds{
+    padding: 1.5rem 1.5rem 0 1.5rem ;
+}
+
+.account-creds label{
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.account-creds input{
+    color: var(--grey);
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    width: 100%;
+    border: 1px solid 
+    var(--grey);
+}
+
+.account-actions{
+    background: var(--offwhite);
+    padding: 1.5rem;
+    border-top: 1px solid 
+    var(--grey);
+}
+
+.account-actions label{
+    color: var(--grey);
+    font-size: 0.65rem;
+    margin: 0.5rem 0 0 1.5rem;
+}
+
+.account-actions .button{
+    background: var(--primary);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}

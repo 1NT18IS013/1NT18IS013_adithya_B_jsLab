@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>A component library</h1>
+
+    <h2>@typography</h2>
+    <h1>Largest heading</h1>
+    <h2>Second largest heading</h2>
+    <p>This is for texts that are free flowing like paragraphs</p>
+    <small>for small texts</small>
+
+    <hr>
+
+    <h2>@containers</h2>
+
+    <h3 >fluid container</h3>
+    <div class="container">This is for a fluid contaiber freely flowing</div>
+
+    <h3>centered container</h3>
+    <div class="container centered-container">This is for a centered conatainer with a specific margin</div>
+
+    <hr>
+
+    <h2>@links</h2>
+
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary" href="/">Secondary Link</a>
+
+    <hr>
+
+    <h2>@lists</h2>
+
+    <h3>unordered list</h3>
+    <ul class="list-nonBullet">
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+    </ul>
+
+    <h3>inline list</h3>
+    <ul class="list-nonBullet">
+        <li class="list-item-inline">List1</li>
+        <li class="list-item-inline">List2</li>
+        <li class="list-item-inline">List3</li>
+    </ul>
+
+    <hr>
+
+    <h2>@navigation</h2>
+
+    <nav class="navbar">
+        <div class="navBrand">navLogo</div>
+        <ul class="list-nonBullet nav-items">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/">home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/">product</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/">about</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <hr>
+
+    <h2>@sections</h2>
+
+    <section>
+        <div class="container centered-container">
+            <h3>white section</h3>
+            <p>this is the white section of the page</p>
+        </div>
+    </section>
+
+    <section class="section-ow">
+        <div class="container centered-container">
+            <h3>offwhite section</h3>
+            <p>this is the offwhite section of the page</p>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <h2>@footer</h2>
+
+    <footer>
+        <div>a small text for footer</div>
+        <ul class="list-nonBullet">
+            <li class="list-item-inline">
+                <a href="/" class="link">socialLink1</a>
+            </li>
+            <li class="list-item-inline">
+                <a href="/" class="link">socialLink2</a>
+            </li>
+            <li class="list-item-inline">
+                <a href="/" class="link">socialLink3</a>
+            </li>
+        </ul>
+    </footer>
+
+    <hr>
+
+    <h2>@login</h2>
+
+    <form>
+        <fieldset class="account-creds">
+            <label>
+                Username
+                <input type="text">
+            </label>
+            <label>
+                Password
+                <input type="password">
+            </label>
+        </fieldset>
+        <fieldset class="account-actions">
+            <input class="button" type="submit" value="Login">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+        </fieldset>
+    </form>
+
+</body>
+</html>
