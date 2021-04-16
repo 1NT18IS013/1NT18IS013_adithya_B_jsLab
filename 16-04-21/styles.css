@@ -21,8 +21,8 @@ body{
 
 .card-deck{
     background: var(--bg-color-400);
-    max-width: 35rem;
-    height: 35rem;
+    max-width: 38rem;
+    height: 38rem;
     margin: auto;
     border-radius: 20px;
 }
@@ -37,11 +37,11 @@ ul{
 
 .card{
     background: var(--bg-color-900);
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     text-align: center;
     margin: 1.2rem 0 0 0;
     padding: 1rem 0 0 0;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
 }
