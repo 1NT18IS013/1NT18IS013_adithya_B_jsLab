@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root{
-
+    --bg-color-100 : #DBEAFE;
+    --bg-color-400 : #60A5FA;
+    --bg-color-900 : #1E3A8A;
 }
 
 *, *::before, *::after{
@@ -13,5 +15,32 @@ body{
     text-align: center;
     font-family: 'Montserrat', 
     sans-serif;
+    background: var(--bg-color-100);
+    flex-direction: column;
 }
 
+.card-deck{
+    background: var(--bg-color-400);
+    max-width: 35rem;
+    height: 35rem;
+    margin: auto;
+    border-radius: 20px;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.card{
+    background: var(--bg-color-900);
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    margin: 1.2rem 0 0 0;
+    padding: 1rem 0 0 0;
+    border-radius: 10px;
+}
