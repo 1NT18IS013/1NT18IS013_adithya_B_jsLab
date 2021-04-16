@@ -1,9 +1,9 @@
-const box1 = document.querySelector("#b1");
-const box2 = document.querySelector("#b2");
-const box3 = document.querySelector("#b3");
-const box4 = document.querySelector("#b4");
+const box1 = document.getElementById("b1");
+const box2 = document.getElementById("b2");
+const box3 = document.getElementById("b3");
+const box4 = document.getElementById("b4");
 
-const res = document.querySelector("#result");
+const res = document.getElementById("result");
 
 
 box1.addEventListener('mouseover', (e) => {
@@ -14,11 +14,11 @@ box2.addEventListener('mousedown', (e) => {
     showMessage("You're getting there.. don't rush 😂");
 })
 
-box3.addEventListener('dblclick', () => {
+box3.addEventListener('dblclick', (e) => {
     showMessage("Twise clicked ! hungry to reach your goal? 🤭");
 })
 
-box4.addEventListener('click', () => {
+box4.addEventListener('click', (e) => {
     showMessage("Yay! 🤙 you've MADE IT");
 })
 // To display message
