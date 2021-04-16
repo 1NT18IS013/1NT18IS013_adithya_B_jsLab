@@ -46,5 +46,25 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.card.show{
     font-size: 3rem;
+}
+
+.card.match{
+    font-size: 3rem;
+    background: #10B981;
+    cursor: default;
+}
+
+.card.unmatch{
+    font-size: 3rem;
+    background: #e2043b;
+}
+
+.card.disable{
+    pointer-events: none;
 }
