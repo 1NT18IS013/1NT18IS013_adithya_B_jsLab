@@ -5,33 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <h1>Memory Game</h1>
-        <div class="score"></div>
     </header>
 
-    <div class="card-deck">
-        <ul>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
-            <li class="card"></li>
+    <section class="outputs">
+        Score : <span class="score">0</span>
+    </section>
+
+    <section class="card-deck">
+        <ul id="card-deck">
+            <li class="card" value="firefox">
+                <i class="fa fa-firefox" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="linkedin">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="reddit">
+                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="spotify">
+                <i class="fa fa-spotify" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="reddit">
+                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="youtube">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="spotify">
+                <i class="fa fa-spotify" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="snapchat">
+                <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="firefox">
+                <i class="fa fa-firefox" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="snapchat">
+                <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="youtube">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </li>
+            <li class="card" value="linkedin">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </li>
         </ul>
-    </div>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>

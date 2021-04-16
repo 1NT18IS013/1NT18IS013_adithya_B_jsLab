@@ -39,9 +39,12 @@ ul{
     background: var(--bg-color-900);
     width: 8rem;
     height: 8rem;
-    text-align: center;
-    margin: 1.2rem 0 0 0;
-    padding: 1rem 0 0 0;
+    margin: 1.2rem 0 0 ;
+    padding: 1rem;
     border-radius: 5px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
