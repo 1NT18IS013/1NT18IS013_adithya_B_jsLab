@@ -2,11 +2,14 @@ const cards = [...document.querySelectorAll('.card')];
 
 const cardsMatched = document.getElementsByClassName("match");
 
-let score = document.getElementsByClassName("score");
-// console.log(cards);
+const score = document.getElementById("score");
+
 
 // array of opened cards
 let cardsOpen = [];
+// move count
+let moves = 0;
+
 
 // to flip/open cards
 const showCards = (e) => {
@@ -52,8 +55,15 @@ const unmatched = () => {
 const flipCards = (e) => {
     cardsOpen.push(e.currentTarget);
     if (cardsOpen.length === 2) {
+        counter();
         cardsOpen[0].type == cardsOpen[1].type ? matched() : unmatched();
     }
+}
+
+// move counter
+const counter = () => {
+    moves += 1;
+    score.innerText = moves;
 }
 
 
