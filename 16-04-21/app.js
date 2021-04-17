@@ -1,15 +1,29 @@
 const cards = [...document.querySelectorAll('.card')];
 
+let cardsMatched = [...document.querySelectorAll('.match')];
+
 let score = document.getElementsByClassName("score");
 // console.log(cards);
 
 // array of opened cards
-const cardsOpen = [];
+let cardsOpen = [];
 
 // to flip/open cards
 const showCards = (e) => {
     e.target.classList.add("show");
     e.target.classList.add("disable");
+}
+
+const enable = () => {
+    // console.log(cards);
+    cards.forEach(card => {
+        card.classList.remove("disable");
+        cardsMatched.forEach(card => card.classList.add("disable"));
+    })
+}
+
+const disable = () => {
+    cards.forEach(card => card.classList.add("disable"));
 }
 
 // matching cards
@@ -23,10 +37,15 @@ const matched = () => {
 
 // unmatched cards
 const unmatched = () => {
-    cardsOpen.forEach((card) => {
+    cardsOpen.forEach(card => {
       card.classList.add("unmatch");
     });
-    cardsOpen = [];
+    disable();
+    setTimeout(function(){
+        cardsOpen.forEach(card => card.classList.remove("show", "match"));
+        enable();
+        cardsOpen = [];
+    }, 1000);
 }
 
 // game play
