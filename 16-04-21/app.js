@@ -1,6 +1,6 @@
 const cards = [...document.querySelectorAll('.card')];
 
-let cardsMatched = [...document.querySelectorAll('.match')];
+const cardsMatched = document.getElementsByClassName("match");
 
 let score = document.getElementsByClassName("score");
 // console.log(cards);
@@ -14,38 +14,38 @@ const showCards = (e) => {
     e.target.classList.add("disable");
 }
 
+// to enable/disable pointer events
 const enable = () => {
-    // console.log(cards);
-    cards.forEach(card => {
-        card.classList.remove("disable");
-        cardsMatched.forEach(card => card.classList.add("disable"));
-    })
+    cards.forEach(card => card.classList.remove("disable"));
+    [...cardsMatched].forEach(card => card.classList.add("disable"));
 }
 
 const disable = () => {
     cards.forEach(card => card.classList.add("disable"));
 }
 
+
 // matching cards
 const matched = () => {
-    cardsOpen.forEach(card => {
-        card.classList.add("match");
-        card.classList.remove("show");
-    });
-    cardsOpen = [];
+  cardsOpen.forEach((card) => {
+    card.classList.add("match");
+    card.classList.remove("show");
+  });
+//   console.log(cardsOpen);
+  cardsOpen = [];
 }
 
 // unmatched cards
 const unmatched = () => {
     cardsOpen.forEach(card => {
       card.classList.add("unmatch");
-    });
+    })
     disable();
-    setTimeout(function(){
-        cardsOpen.forEach(card => card.classList.remove("show", "match"));
+    setTimeout(function () {
+        cardsOpen.forEach(card => card.classList.remove("show", "match", "unmatch"));
         enable();
         cardsOpen = [];
-    }, 1000);
+    }, 1200)
 }
 
 // game play
