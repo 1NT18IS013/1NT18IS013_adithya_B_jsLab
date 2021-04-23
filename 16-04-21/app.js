@@ -1,14 +1,30 @@
-const cards = [...document.querySelectorAll('.card')];
+let cards = [...document.querySelectorAll('.card')];
+
+const deck = document.getElementById('card-deck');
 
 const cardsMatched = document.getElementsByClassName("match");
 
 const score = document.getElementById("score");
 
-
 // array of opened cards
 let cardsOpen = [];
 // move count
 let moves = 0;
+
+// shuffling cards
+const shuffle = (array) => {
+    let curr = array.length;
+    while (curr !== 0) {
+        rand = Math.floor(Math.random() * curr);
+
+        curr--;
+        let temp = array[curr];
+        array[curr] = array[rand];
+        array[rand] = temp;
+    }
+    return array;
+    
+}
 
 
 // to flip/open cards
@@ -72,4 +88,25 @@ cards.forEach(card => {
     card.addEventListener('click', showCards);
     card.addEventListener('click', flipCards);
 });
+
+
+// Game
+const start = () => {
+
+    cardsOpen = [];
+
+    cards = shuffle(cards);
+    
+    for (let i = 0; i < cards.length; i++) {
+        deck.innerHTML = '';
+        cards.forEach(card => deck.appendChild(card))
+        cards[i].classList.remove("show","match","unmatch","disable")
+    }
+
+    moves = 0
+    score.innerText = moves;
+}
+
+// Start Game
+document.body.onload = start();
 
