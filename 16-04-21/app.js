@@ -11,6 +11,8 @@ let cardsOpen = [];
 // move count
 let moves = 0;
 
+let name = '';
+
 // shuffling cards
 const shuffle = (array) => {
     let curr = array.length;
@@ -50,7 +52,6 @@ const matched = () => {
     card.classList.add("match");
     card.classList.remove("show");
   });
-//   console.log(cardsOpen);
   cardsOpen = [];
 }
 
@@ -74,6 +75,19 @@ const flipCards = (e) => {
         counter();
         cardsOpen[0].type == cardsOpen[1].type ? matched() : unmatched();
     }
+    
+    //Caching player scores for a session 
+    if ([...cardsMatched].length === 16) {
+        console.log("Complete");
+        const player = {
+          player: name,
+          score: moves,
+        };
+
+        storeSession(player);
+
+        name = '';
+    }
 }
 
 // move counter
@@ -90,8 +104,24 @@ cards.forEach(card => {
 });
 
 
+// Storing session
+const storeSession = (player) => {
+    let players;
+    if (sessionStorage.getItem("players") === null) {
+      players = [];
+    } else {
+      players= JSON.parse(sessionStorage.getItem("players"));
+    }
+
+    players.push(player);
+    // Save to sessionStorage
+    sessionStorage.setItem("players", JSON.stringify(players));
+}
+
 // Game
 const start = () => {
+
+    name = prompt("Give you name :");
 
     cardsOpen = [];
 
@@ -105,8 +135,10 @@ const start = () => {
 
     moves = 0
     score.innerText = moves;
+    
 }
 
 // Start Game
 document.body.onload = start();
+
 
