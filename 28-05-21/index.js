@@ -1,5 +1,6 @@
 const btn = document.getElementById('btn');
 const container = document.getElementById('tasks');
+const search = document.getElementById('query');
 
 let tasks = [];
 
@@ -32,6 +33,34 @@ function renderTaskList() {
         `;
 }
 
+function renderResults(result) {
+    return `
+        ${result.length !== 0 ?
+            `
+        <ul>
+            ${result.map(task =>
+                `
+                    <div class="flex">
+                        <li class="list" id="${task.id}">
+                            <span
+                            style="text-decoration:${task.completed ? "line-through" : "none"}"
+                            >${task.name}</span>
+                            <span class="btn" onclick="statusHandler(${
+                                task.id
+                            })">✅</span>
+                            <span class="btn" onclick="removeHandler(${
+                                task.id
+                            })">❌</span>
+                        </li>
+                    </div> 
+                `
+            )}
+        </ul>
+        `
+            : "No results found."}
+    `
+}
+
 const statusHandler = (id) => {
     const idx = tasks.findIndex(t => t.id === id);
     tasks[idx].completed = !tasks[idx].completed;
@@ -61,3 +90,10 @@ btn.addEventListener('click', () => {
     container.innerHTML = renderTaskList();
 
 });
+
+
+search.addEventListener('change', () => {
+    let result = tasks.filter(t => t.name === search.value);
+
+    container.innerHTML = renderResults(result);
+})
