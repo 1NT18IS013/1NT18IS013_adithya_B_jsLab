@@ -96,4 +96,4 @@ search.addEventListener('change', () => {
     let result = tasks.filter(t => t.name === search.value);
 
     container.innerHTML = renderResults(result);
-})
+});
