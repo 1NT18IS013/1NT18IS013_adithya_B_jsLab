@@ -1,3 +1,7 @@
+// Title: Working with objects and loops
+// Description: Different ways of looping through object
+// Author: Adithya_Mallya@1NT18IS013
+// Date: 21/05/21
 const products = [
   { id: 1, title: "pen", cost: 50 },
   { id: 2, title: "pencil", cost: 20 },
