@@ -1,9 +1,14 @@
+// Title: REgular Expressions
+// Description: implement regex for below tasks
+// Author: Adithya_Mallya@1NT18IS013
+// Date: 04/06/21
+
 // regex for names
 // regex for department names
 // regex for USN
 
 const namesExp = /^[a - zA - Z\s]$/gi;
-const usnExp = /(1NT)(\d{2})((IS|CS|EC|ME|AE|EE))(\d{3})/gi
+const usnExp = /(1NT)(\d{2})((IS|CS|EC|ME|AE|EE))(\d{3})/gi;
 const branchExp = /^(ISE|CSE|ECE|MEC|AE|EEE)$/gi;
 
 const testName = "Adithya Krishna S Mallya";
