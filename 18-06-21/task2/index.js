@@ -1,3 +1,8 @@
+// Title: Promises
+// Description: Integrated promises in adding a task in previous toDo app
+// Author: Adithya_Mallya@1NT18IS013
+// Date: 18/06/21
+
 const btn = document.getElementById("btn");
 const container = document.getElementById("tasks");
 const search = document.getElementById("query");

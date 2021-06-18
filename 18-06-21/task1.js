@@ -1,8 +1,7 @@
-// promise on successfull insertion of element to array
-// set setTimeout of 1000ms
-
-// promise to display elements of an array
-// on click on a button "show"
+// Title: Promises
+// Description: Return a promise on insertion of element inot an array
+// Author: Adithya_Mallya@1NT18IS013
+// Date: 18/06/21
 
 const db = [];
 
