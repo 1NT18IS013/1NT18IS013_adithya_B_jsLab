@@ -8,7 +8,7 @@ Question :
 Create an app to demonstrate the fetch URI from at least two different servers on the same page.
 ```
 ### Description 
-Made a fun translator app, that can translate you english text to either  _Minion_ or _Shakespearean_ language.
+Made a fun translator app, that can translate your english text to either  _Minion_ or _Shakespearean_ language.
 
 ### Demo
 
